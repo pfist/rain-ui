@@ -13,7 +13,7 @@ apm install rain-ui
 
 Alternatively, from right inside the app:
 
-1. Open the Settings pane with `Ctrl + ,`.
+1. Open the Settings pane.
 2. Select the Install tab, then the Themes button next to the search field.
 3. Search for `rain-ui`, then click Install.
 4. To use it, select the Themes tab and choose Rain from the UI Theme dropdown.
