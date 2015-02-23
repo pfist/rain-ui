@@ -1,0 +1,36 @@
+// Rain UI: Editor
+// ---------------------------------------------
+
+atom-text-editor[mini] {
+  max-height: 38px;
+  padding: .3rem .8rem;
+  border-radius: @component-border-radius;
+  background-color: @input-background-color;
+  color: @text-color-highlight;
+  transition: all 100ms ease;
+  &,
+  &::shadow {
+    .placeholder-text {
+      color: @text-color-subtle;
+    }
+    .selection .region {
+      background-color: @input-selection-color;
+    }
+    .cursor {
+      border-color: @theme-color-5;
+      border-width: 2px;
+    }
+  }
+  &.is-focused,
+  &.is-focused::shadow {
+    // .focus();
+    background-color: @input-background-color-focus;
+    .selection .region {
+      background-color: @input-selection-color-focus;
+    }
+  }
+}
+
+.find-and-replace atom-text-editor[mini] {
+  border-radius: @component-border-radius 0 0 @component-border-radius;
+}

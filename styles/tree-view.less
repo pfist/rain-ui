@@ -1,0 +1,37 @@
+// Rain UI: Tree View
+// ---------------------------------------------
+
+.tree-view {
+  font-size: @font-size;
+  background-color: @tree-view-background-color;
+  .project-root {
+    &:before {
+      height: @tab-height;
+    }
+    & > .header .name {
+      line-height: @tab-height;
+    }
+  }
+  .selected:before {
+    background-color: @background-color-highlight;
+  }
+}
+
+.tree-view-resizer {
+  .tree-view-resize-handle {
+    width: 0.5rem;
+  }
+}
+
+.focusable-panel {
+  opacity: 1;
+  background-color: @tree-view-background-color;
+  &:focus {
+    .selected {
+      color: @text-color-selected;
+      &:before {
+        background-color: @background-color-selected;
+      }
+    }
+  }
+}

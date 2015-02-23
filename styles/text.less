@@ -1,0 +1,109 @@
+// Rain UI: Text
+// ---------------------------------------------
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+pre {
+  box-shadow: none;
+  color: @text-color;
+  background: @inset-panel-background-color;
+  border-radius: @component-border-radius;
+  border: none;
+  margin: 0;
+}
+
+code {
+  .text(highlight);
+  background: @background-color-highlight;
+  border-radius: @component-border-radius;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  transition: color 100ms ease;
+  &:hover {
+    color: @theme-color-accent;
+  }
+}
+
+a.icon,
+button.icon {
+  color: @theme-color-1;
+  &:hover {
+    color: @theme-color-1;
+  }
+}
+
+.selected {
+  .text(highlight);
+}
+
+.text-smaller {
+  font-size: 0.9rem;
+}
+
+.text-subtle {
+  .text(subtle);
+}
+
+.text-highlight {
+  .text(highlight);
+}
+
+.text-info {
+  .text(info);
+  &:hover {
+    color: @text-color-info;
+  }
+}
+
+.text-success {
+  .text(success);
+  &:hover {
+    color: @text-color-success;
+  }
+}
+
+.text-warning {
+  .text(warning);
+  &:hover {
+    color: @text-color-warning;
+  }
+}
+
+.text-error {
+  .text(error);
+}
+
+.highlight {
+  .highlighted();
+  background-color: @background-color-highlight;
+}
+
+.highlight-color(info, @background-color-info, @text-color-info);
+.highlight-color(success, @background-color-success, @text-color-success);
+.highlight-color(warning, @background-color-warning, @text-color-warning);
+.highlight-color(error, @background-color-error, @text-color-error);

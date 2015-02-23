@@ -1,0 +1,80 @@
+// Rain UI: Buttons
+// ---------------------------------------------
+
+// Buttons
+.btn {
+  .button-background(@button-background-color, @button-background-color-hover, @button-background-color-selected, @text-color);
+  height: 33px;
+  transition: all 100ms ease;
+}
+
+.btn.btn-xs {
+  font-size: .8rem;
+  padding: .4rem;
+}
+
+.btn.btn-sm {
+  font-size: .9rem;
+  padding: .6rem;
+}
+
+.btn.btn-lg {
+  font-size: 1.2rem;
+  padding: .8rem;
+}
+
+.btn.btn-primary {
+  .button(@base-accent-color);
+}
+
+.btn.btn-info {
+  .button(@background-color-info);
+}
+
+.btn.btn-success {
+  .button(@background-color-success);
+}
+
+.btn.btn-warning {
+  .button(@background-color-warning);
+}
+
+.btn.btn-error {
+  .button(@background-color-error);
+}
+
+// Button Groups
+.btn-group > .btn {
+  z-index: 0;
+  &:hover {
+    z-index: 0;
+  }
+  &.btn:focus {
+    z-index: 1;
+  }
+  &.selected,
+  &.selected:first-child,
+  &.selected:last-child {
+    color: @button-text-color-selected;
+  }
+}
+
+// Buttons in the 'Find and Replace' panel
+.find-and-replace .find-container .btn-group-find,
+.find-and-replace .replace-container .btn-group-replace {
+  margin-left: 0;
+  & .btn {
+    border-radius: 0 @component-border-radius @component-border-radius 0;
+  }
+}
+
+.find-and-replace .btn-group-options.btn-group .btn {
+  font-family: @font-family;
+  padding: 0;
+  border: none;
+  color: @theme-color-4;
+  &:hover,
+  &.selected {
+    color: @theme-color-1;
+  }
+}

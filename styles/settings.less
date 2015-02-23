@@ -1,0 +1,60 @@
+// Rain UI: Settings Menu
+// ---------------------------------------------
+
+.settings-view .config-menu {
+  background: @theme-color-6;
+  border: none;
+}
+
+.settings-view .config-menu .nav > li > a {
+  color: @theme-color-2;
+}
+
+.settings-view .config-menu .nav > li > a:hover {
+  background: transparent;
+  color: @theme-color-1;
+}
+
+.settings-view .config-menu .nav > li.active > a {
+  background: @theme-color-5;
+  color: @theme-color-1;
+}
+
+.settings-view .settings-panel label {
+  color: @theme-color-2;
+}
+
+.settings-view input[type="checkbox"]:checked {
+  background-color: @theme-color-accent;
+}
+
+.settings-view select.form-control {
+  border: none;
+  background: @theme-color-4;
+  transition: all 100ms ease;
+  &:hover,
+  &:focus {
+    background: @theme-color-1;
+  }
+}
+
+.settings-view .available-package-view {
+  border: none;
+  background: @theme-color-4;
+  color: @theme-color-6;
+  & .card-name {
+    font-weight: bold;
+  }
+}
+
+.settings-view .sub-section-heading {
+  color: @theme-color-3;
+}
+
+.settings-view .text {
+  color: @theme-color-4;
+}
+
+.settings-view .copy-icon:hover {
+  color: @theme-color-accent;
+}

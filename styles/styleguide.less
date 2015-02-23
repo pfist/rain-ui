@@ -1,0 +1,74 @@
+// Rain UI: Styleguide
+// ---------------------------------------------
+
+.styleguide section.bordered,
+.styleguide section.collapsed {
+  padding: @component-padding 0; // stops jumping of the title when collapsing
+}
+
+.styleguide section.bordered {
+  border-color: @theme-color-5;
+  color: @theme-color-3;
+}
+
+.styleguide .section-heading {
+  font-size: 1.5em;
+  line-height: 1.3;
+}
+
+.styleguide section:not([data-name="styleguide"]) .section-heading {
+  color: @theme-color-3;
+  &:hover {
+    color: @theme-color-4;
+  }
+}
+
+.styleguide h2 {
+  font-size: 1.3rem;
+  line-height: 1.2;
+  margin-bottom: 0;
+  font-weight: bold;
+  color: @theme-color-4;
+}
+
+.styleguide atom-panel.modal:after {
+  position: absolute;  // prevent overlay backdrop from leaking outside
+  left: -@component-padding/2;
+  right: -@component-padding/2;
+  bottom: -@component-padding/2;
+}
+
+.styleguide atom-panel.modal:after {
+  position: absolute;  // prevent overlay backdrop from leaking outside
+}
+
+.styleguide .select-list atom-text-editor[mini],
+.styleguide .popover-list atom-text-editor[mini] {
+  line-height: 25px;
+}
+
+
+.example {
+  border: none;
+
+  .example-rendered {
+    // border: 1px solid @base-border-color;
+    border-radius: @component-border-radius 0 0 @component-border-radius;
+    background: darken(@theme-color-3, 5%);
+    color: @theme-color-6;
+    font-size: @font-size;
+  }
+
+  .example-code {
+    border: none;
+    border-radius: 0 @component-border-radius @component-border-radius 0;
+    background: @theme-color-6;
+    pre {
+      border-radius: 0 @component-border-radius @component-border-radius 0;
+      background: @theme-color-6;
+    }
+    .btn-group .btn.selected {
+      background: @theme-color-3;
+    }
+  }
+}

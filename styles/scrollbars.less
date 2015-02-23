@@ -1,0 +1,26 @@
+// Rain UI: Scrollbars
+// ---------------------------------------------
+
+.scrollbars-visible-always {
+  /deep/ ::-webkit-scrollbar {
+    width: @component-padding;
+    height: @component-padding;
+  }
+  /deep/ ::-webkit-scrollbar-track {
+    background: @scrollbar-background-color;
+  }
+  /deep/ ::-webkit-scrollbar-thumb {
+    border-radius: @component-padding;
+    border: 3px solid @scrollbar-background-color;
+    background: @scrollbar-color;
+    background-clip: content-box;
+  }
+  /deep/ ::-webkit-scrollbar-corner {
+    background: @scrollbar-background-color;
+  }
+  /deep/ ::-webkit-scrollbar-thumb:vertical:active,
+  /deep/ ::-webkit-scrollbar-thumb:horizontal:active {
+    background: lighten(@scrollbar-color, 10%);
+    background-clip: content-box;
+  }
+}

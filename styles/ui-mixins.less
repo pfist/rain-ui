@@ -1,0 +1,93 @@
+// Rain UI: Mixins
+// ---------------------------------------------
+
+// Text
+.text(normal) {
+  font-weight: normal;
+  color: @text-color;
+}
+.text(subtle) {
+  font-weight: normal;
+  color: @text-color-subtle;
+}
+.text(highlight) {
+  font-weight: normal;
+  color: @text-color-highlight;
+}
+.text(selected) {
+  .text(highlight)
+}
+
+.text(info) {
+  color: @text-color-info;
+}
+.text(success) {
+  color: @text-color-success;
+}
+.text(warning) {
+  color: @text-color-warning;
+}
+.text(error) {
+  color: @text-color-error;
+}
+
+.focus() {
+  outline: none;
+  border-color: @base-accent-color;
+  box-shadow: 0 0 0 1px @base-accent-color;
+}
+
+.highlighted {
+  padding: 1px 4px;
+  font-weight: bold;
+  text-shadow: none;
+  border-radius: @component-border-radius;
+  color: @text-color-highlight;
+}
+
+.highlight-color(@name, @color, @text-color) {
+  .highlight-@{name} {
+    .highlighted();
+    background-color: fadeout(@color, 50%);
+  }
+}
+
+// Buttons
+.button-background(@color, @hover-color, @selected-color, @text-color) {
+  background-color: @color;
+  color: @theme-color-1;
+  text-shadow: none;
+  &:focus {
+    outline: none;
+  }
+  &:focus,
+  &:hover {
+    background-color: @hover-color;
+    color: @theme-color-1;
+  }
+  &:active {
+    background-color: darken(@color, 4%);
+    box-shadow: none;
+  }
+  &.selected {
+    background-color: @selected-color;
+  }
+  &.selected:focus,
+  &.selected:hover {
+    background-color: lighten(@selected-color, 2%);
+  }
+}
+
+.button(@color) {
+  @text-color: contrast(@color, hsl(0, 0%, 25%), white, 70%);
+  @background: @color;
+  @hover: lighten(@background, 3%);
+  @selected: saturate(darken(@background, 12%), 20%);
+  .button-background(@background, @hover, @selected, @text-color-highlight);
+  color: @text-color;
+  text-shadow: 0 1px 0 hlsa(0, 0%, 0%, .2);
+  &:focus,
+  &:hover {
+    color: @text-color;
+  }
+}

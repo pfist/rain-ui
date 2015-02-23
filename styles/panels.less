@@ -1,0 +1,47 @@
+// Rain UI: Panels
+// ---------------------------------------------
+
+.panel {
+  &.bordered {
+    border-radius: @component-border-radius;
+  }
+}
+
+atom-panel {
+  .text(normal);
+  position: relative;
+}
+
+.inset-panel {
+  position: relative;
+  background-color: @inset-panel-background-color;
+  &.bordered {
+    border-radius: @component-border-radius;
+  }
+  & .panel-heading {
+    border-color: @inset-panel-border-color;
+  }
+}
+
+.panel-heading {
+  .text(normal);
+  border-bottom: 2px solid @panel-heading-border-color;
+  background-color: @panel-heading-background-color;
+  .btn {
+    padding-left: 8px;
+    padding-right: 8px;
+    @background: lighten(@button-background-color, 10%);
+    @hover: lighten(@button-background-color-hover, 10%);
+    @selected: lighten(@button-background-color-selected, 10%);
+    @text: lighten(@text-color, 10%);
+    .button-background(@background, @hover, @selected, @text);
+  }
+}
+
+// Find and Replace panel
+.find-and-replace {
+  font-weight: bold;
+}
+.find-and-replace .find-meta-container {
+  top: 4px;
+}
