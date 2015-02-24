@@ -1,6 +1,6 @@
 # Rain UI
 
-A calming UI theme for Atom. A matching [syntax theme](URL) is available.
+A calming UI theme for Atom. A matching [syntax theme](https://atom.io/themes/rain-syntax) is available.
 
 ![screenshot](https://dl.dropboxusercontent.com/u/3106750/github/rain-ui-screenshot.png)
 
