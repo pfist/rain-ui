@@ -1,5 +1,4 @@
-// Rain UI: Styleguide
-// ---------------------------------------------
+// ========== Styleguide ========== //
 
 .styleguide section.bordered,
 .styleguide section.collapsed {
@@ -7,28 +6,34 @@
 }
 
 .styleguide section.bordered {
-  border-color: @theme-color-5;
+  border-color: @theme-color-6;
   color: @theme-color-3;
 }
 
-.styleguide .section-heading {
-  font-size: 1.5em;
-  line-height: 1.3;
+.styleguide h1.section-heading {
+  color: @theme-color-2;
+  font-weight: 700;
+  font-size: 2rem;
+  &:hover {
+    color: @theme-color-3;
+  }
 }
 
 .styleguide section:not([data-name="styleguide"]) .section-heading {
+  font-size: 1.5rem;
   color: @theme-color-3;
   &:hover {
     color: @theme-color-4;
   }
 }
 
+atom-pane-container atom-pane .item-views .styleguide {
+  background: @theme-color-8;
+}
+
 .styleguide h2 {
-  font-size: 1.3rem;
-  line-height: 1.2;
-  margin-bottom: 0;
-  font-weight: bold;
-  color: @theme-color-4;
+  font-size: 1rem;
+  text-transform: uppercase;
 }
 
 .styleguide atom-panel.modal:after {
@@ -47,25 +52,27 @@
   line-height: 25px;
 }
 
+.styleguide [data-name="variables"] .example-rendered {
+  border-radius: @component-border-radius;
+}
 
 .example {
   border: none;
 
   .example-rendered {
-    // border: 1px solid @base-border-color;
     border-radius: @component-border-radius 0 0 @component-border-radius;
-    background: darken(@theme-color-3, 5%);
-    color: @theme-color-6;
+    background: @theme-color-2;
+    color: @theme-color-7;
     font-size: @font-size;
   }
 
   .example-code {
-    border: none;
     border-radius: 0 @component-border-radius @component-border-radius 0;
-    background: @theme-color-6;
+    background: @theme-color-9;
     pre {
       border-radius: 0 @component-border-radius @component-border-radius 0;
-      background: @theme-color-6;
+      background: @theme-color-9;
+      color: @theme-color-2;
     }
     .btn-group .btn.selected {
       background: @theme-color-3;

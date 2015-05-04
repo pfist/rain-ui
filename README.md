@@ -2,7 +2,7 @@
 
 A calming UI theme for Atom. A matching [syntax theme](https://atom.io/themes/rain-syntax) is available.
 
-![screenshot](https://dl.dropboxusercontent.com/u/3106750/github/rain-ui-screenshot.png)
+![screenshot](https://dl.dropboxusercontent.com/u/3106750/github/rain-ui-1.0.0.png)
 
 ## Install
 From the command line:

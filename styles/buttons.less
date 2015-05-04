@@ -1,10 +1,9 @@
-// Rain UI: Buttons
-// ---------------------------------------------
+// ========== Buttons ========== //
 
 // Buttons
 .btn {
   .button-background(@button-background-color, @button-background-color-hover, @button-background-color-selected, @text-color);
-  height: 33px;
+  height: @tab-height;
   transition: all 100ms ease;
 }
 
@@ -56,25 +55,5 @@
   &.selected:first-child,
   &.selected:last-child {
     color: @button-text-color-selected;
-  }
-}
-
-// Buttons in the 'Find and Replace' panel
-.find-and-replace .find-container .btn-group-find,
-.find-and-replace .replace-container .btn-group-replace {
-  margin-left: 0;
-  & .btn {
-    border-radius: 0 @component-border-radius @component-border-radius 0;
-  }
-}
-
-.find-and-replace .btn-group-options.btn-group .btn {
-  font-family: @font-family;
-  padding: 0;
-  border: none;
-  color: @theme-color-4;
-  &:hover,
-  &.selected {
-    color: @theme-color-1;
   }
 }

@@ -1,10 +1,13 @@
-// Rain UI: Panels
-// ---------------------------------------------
+// ========== Panels ========== //
 
 .panel {
   &.bordered {
     border-radius: @component-border-radius;
   }
+}
+
+.panels {
+  background: @app-background-color;
 }
 
 atom-panel {
@@ -19,6 +22,7 @@ atom-panel {
     border-radius: @component-border-radius;
   }
   & .panel-heading {
+    color: @theme-color-3;
     border-color: @inset-panel-border-color;
   }
 }
@@ -36,12 +40,4 @@ atom-panel {
     @text: lighten(@text-color, 10%);
     .button-background(@background, @hover, @selected, @text);
   }
-}
-
-// Find and Replace panel
-.find-and-replace {
-  font-weight: bold;
-}
-.find-and-replace .find-meta-container {
-  top: 4px;
 }

@@ -1,40 +1,72 @@
-// Rain UI: Settings Menu
-// ---------------------------------------------
+// ========== Settings ========== //
+
+.settings-view {
+  background: @theme-color-8;
+}
 
 .settings-view .config-menu {
-  background: @theme-color-6;
+  background: @theme-color-8;
   border: none;
 }
 
 .settings-view .config-menu .nav > li > a {
-  color: @theme-color-2;
-}
-
-.settings-view .config-menu .nav > li > a:hover {
-  background: transparent;
-  color: @theme-color-1;
+  color: @theme-color-4;
+  &:hover {
+    background: transparent;
+    color: @theme-color-1;
+  }
 }
 
 .settings-view .config-menu .nav > li.active > a {
-  background: @theme-color-5;
+  background: @theme-color-8;
   color: @theme-color-1;
 }
 
-.settings-view .settings-panel label {
-  color: @theme-color-2;
+.settings-view div > section.section.settings-panel {
+  border: 0;
 }
 
+.settings-view .section:first-child,
+.settings-view .section:last-child {
+  padding: 2rem;
+}
+
+.settings-view .section.settings-panel {
+  background: @theme-color-8;
+  margin: 1rem;
+  padding: 0;
+  .section-container {
+    margin: 0;
+    padding: 2rem;
+    background: @theme-color-2;
+    border-radius: @component-border-radius;
+  }
+}
+
+
+.settings-view .section.keybinding-panel,
+.settings-view section.section,
+.settings-view .section.packages {
+  margin: 1rem;
+  padding: 2rem;
+  background: @theme-color-2;
+  border-radius: @component-border-radius;
+}
+
+
 .settings-view input[type="checkbox"]:checked {
-  background-color: @theme-color-accent;
+  background-color: @theme-color-1;
 }
 
 .settings-view select.form-control {
-  border: none;
-  background: @theme-color-4;
+  border: 2px solid @theme-color-3;
+  background: @theme-color-1;
   transition: all 100ms ease;
+  box-shadow: none;
   &:hover,
   &:focus {
     background: @theme-color-1;
+    border-color: @theme-color-4;
   }
 }
 
@@ -47,14 +79,53 @@
   }
 }
 
-.settings-view .sub-section-heading {
-  color: @theme-color-3;
+.settings-view .section-heading:first-child {
+  color: @theme-color-7;
 }
-
-.settings-view .text {
-  color: @theme-color-4;
+.settings-view .sub-section-heading {
+  color: @theme-color-7;
+  font-size: 1.3rem;
 }
 
 .settings-view .copy-icon:hover {
-  color: @theme-color-accent;
+  color: @theme-color-8;
+}
+
+.settings-view .config-menu .button-area .btn {
+  padding: 0;
+  &:hover {
+    background: @theme-color-9;
+    color: @theme-color-1;
+  }
+}
+
+.settings-view .table td,
+.settings-view .table th {
+  border-color: @theme-color-3;
+}
+
+.settings-view .package-card {
+  border: 0;
+  background: @theme-color-1;
+  &:hover {
+    background: @theme-color-1;
+  }
+  .card-name a {
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    &:hover {
+      color: @theme-color-8;
+    }
+  }
+  .package-description {
+    color: @theme-color-5;
+    font-size: @font-size;
+  }
+}
+
+.settings-view .alert-info {
+  background: @theme-color-3;
+  color: @theme-color-6;
+  border: 0;
 }

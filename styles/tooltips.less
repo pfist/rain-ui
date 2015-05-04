@@ -1,17 +1,17 @@
-// Rain UI: Tooltips
-// ---------------------------------------------
+// ========== Tooltips ========== //
 
 .tooltip {
   white-space: nowrap;
 
   &.in {
     opacity: 1;
-    transition: opacity .12s ease-out;
+    transition: opacity 120ms ease-out;
   }
 
   .tooltip-inner {
-    line-height: 19px;
+    line-height: 1.5rem;
     border-radius: @component-border-radius;
+    // border: 1px solid @theme-color-3;
     background-color: @tooltip-background-color;
     color: @tooltip-text-color;
     white-space: nowrap;
@@ -19,8 +19,8 @@
   }
 
   .keystroke {
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    font-size: 13px;
+    font-family: Consolas;
+    font-size: @font-size;
     padding: 1px 3px;
     margin: 0 -4px 0 3px;
     border-radius: max(2px, @component-border-radius / 2);

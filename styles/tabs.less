@@ -1,5 +1,5 @@
-// Rain UI: Tabs
-// ---------------------------------------------
+// ========== Tabs ========== //
+
 
 // Local variables
 @tab-min-width: 28px;
@@ -24,10 +24,8 @@
     color: @tab-text-color;
     background: @tab-background-color;
     font-size: @font-size;
-    // font-weight: bold;
-    transition: color 100ms ease;
     &:hover {
-      color: @theme-color-5;
+      color: @theme-color-7;
     }
     .title {
       position: relative;
@@ -62,7 +60,7 @@
         color: inherit;
       }
       &:active {
-        opacity: .6;
+        opacity: 0.6;
       }
     }
   }
@@ -90,15 +88,15 @@
       padding: 0;
       text-align: center;
       line-height: @tab-height;
-      border: none;
+      border: 0;
       background: @base-accent-color;
     }
     &:not(.active):not(:hover) .close-icon {
-      background: @theme-color-3;
+      background: @theme-color-4;
     }
     &:hover .close-icon {
       background: transparent;
-      color: @theme-color-3;
+      color: @theme-color-4;
     }
     &.active:hover .close-icon {
       color: @theme-color-5;
@@ -111,7 +109,7 @@
     }
   }
   .tab.is-dragging {
-    background: darken(@tab-background-color, 6%);
+    background: lighten(@tab-background-color-active, 5%);
     opacity: .5;
     & .close-icon,
     &:before,
@@ -122,7 +120,7 @@
   .placeholder {
     margin: 0;
     height: @tab-height;
-    background: @theme-color-5;
+    background: @theme-color-1;
     pointer-events: none;
     &:after {
       top: @tab-height/2 + 0 - 5px;
@@ -131,14 +129,14 @@
       margin: 0;
       border-radius: 0;
       border: 5px solid;
-      border-color: transparent transparent transparent @theme-color-5;
+      border-color: transparent transparent transparent @theme-color-8;
       background: transparent;
     }
     &:last-child {
       margin-left: -2px;
       &:after {
         margin-left: -10px;
-        border-color: transparent @theme-color-5 transparent transparent;
+        border-color: transparent @theme-color-8 transparent transparent;
       }
     }
   }
