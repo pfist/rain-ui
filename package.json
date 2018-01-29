@@ -3,7 +3,7 @@
   "theme": "ui",
   "version": "1.0.1",
   "description": "A calming UI theme for Atom",
-  "repository": "https://github.com/nkpfstr/rain-ui",
+  "repository": "https://github.com/polymoon/rain-ui",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
