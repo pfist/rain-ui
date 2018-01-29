@@ -9,7 +9,7 @@ atom-text-editor[mini] {
   color: @text-color-highlight;
   transition: all 100ms ease;
   &,
-  &::shadow {
+  &.editor {
     .placeholder-text {
       color: @text-color-subtle;
     }
@@ -25,7 +25,7 @@ atom-text-editor[mini] {
     border-color: @input-border-color-hover;
   }
   &.is-focused,
-  &.is-focused::shadow {
+  &.is-focused.editor {
     // .focus();
     border-color: @input-border-color-focus;
     .selection .region {
