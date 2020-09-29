@@ -1,7 +1,7 @@
 {
   "name": "rain-ui",
   "theme": "ui",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A calming UI theme for Atom",
   "keywords": [
     "rain",
