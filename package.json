@@ -3,9 +3,16 @@
   "theme": "ui",
   "version": "1.0.1",
   "description": "A calming UI theme for Atom",
-  "repository": "https://github.com/polymoon/rain-ui",
+  "keywords": [
+    "rain",
+    "calm",
+    "blue",
+    "dark",
+    "syntax"
+  ],
+  "repository": "https://github.com/pfist/rain-ui",
   "license": "MIT",
   "engines": {
-    "atom": ">0.50.0"
+    "atom": ">=1.13.0 <2.0.0"
   }
 }
